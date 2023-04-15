@@ -1,0 +1,64 @@
+2023-04-12 08:10:49 -HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8h38m58s992ms118µs300ns).
+2023-04-12 08:13:05 -Shutting down ExecutorService 'applicationTaskExecutor'
+2023-04-12 08:13:05 -HikariPool-1 - Shutdown initiated...
+2023-04-12 08:13:06 -HikariPool-1 - Shutdown completed.
+2023-04-12 16:16:14 -Starting ImServiceApplication on LAPTOP-VQIK5BJL with PID 3920 (E:\project\im-system\im-service\target\classes started by Venture in E:\project\im-system)
+2023-04-12 16:16:14 -The following profiles are active: dev
+2023-04-12 16:16:15 -Tomcat initialized with port(s): 8080 (http)
+2023-04-12 16:16:15 -Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-12 16:16:15 -Starting service [Tomcat]
+2023-04-12 16:16:15 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-04-12 16:16:15 -Initializing Spring embedded WebApplicationContext
+2023-04-12 16:16:15 -Root WebApplicationContext: initialization completed in 1317 ms
+2023-04-12 16:16:17 -Initializing ExecutorService 'applicationTaskExecutor'
+2023-04-12 16:16:17 -Starting ProtocolHandler ["http-nio-8080"]
+2023-04-12 16:16:17 -Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-12 16:16:17 -Started ImServiceApplication in 3.786 seconds (JVM running for 6.078)
+2023-04-12 16:47:49 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-12 16:47:49 -Initializing Servlet 'dispatcherServlet'
+2023-04-12 16:47:49 -Completed initialization in 6 ms
+2023-04-12 16:47:49 -HikariPool-1 - Starting...
+2023-04-12 16:47:50 -HikariPool-1 - Start completed.
+2023-04-12 19:49:18 -Shutting down ExecutorService 'applicationTaskExecutor'
+2023-04-12 19:49:18 -HikariPool-1 - Shutdown initiated...
+2023-04-12 19:49:18 -HikariPool-1 - Shutdown completed.
+2023-04-12 19:49:55 -Starting ImServiceApplication on LAPTOP-VQIK5BJL with PID 25776 (E:\project\im-system\im-service\target\classes started by Venture in E:\project\im-system)
+2023-04-12 19:49:55 -The following profiles are active: dev
+2023-04-12 19:49:56 -Tomcat initialized with port(s): 8080 (http)
+2023-04-12 19:49:56 -Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-12 19:49:56 -Starting service [Tomcat]
+2023-04-12 19:49:56 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-04-12 19:49:56 -Initializing Spring embedded WebApplicationContext
+2023-04-12 19:49:56 -Root WebApplicationContext: initialization completed in 1090 ms
+2023-04-12 19:49:57 -Initializing ExecutorService 'applicationTaskExecutor'
+2023-04-12 19:49:57 -Starting ProtocolHandler ["http-nio-8080"]
+2023-04-12 19:49:57 -Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-12 19:49:57 -Started ImServiceApplication in 3.331 seconds (JVM running for 4.59)
+2023-04-12 19:55:35 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-12 19:55:35 -Initializing Servlet 'dispatcherServlet'
+2023-04-12 19:55:35 -Completed initialization in 7 ms
+2023-04-12 19:55:36 -HikariPool-1 - Starting...
+2023-04-12 19:55:36 -HikariPool-1 - Start completed.
+2023-04-12 20:07:43 -Shutting down ExecutorService 'applicationTaskExecutor'
+2023-04-12 20:07:43 -HikariPool-1 - Shutdown initiated...
+2023-04-12 20:07:43 -HikariPool-1 - Shutdown completed.
+2023-04-12 20:07:49 -Starting ImServiceApplication on LAPTOP-VQIK5BJL with PID 21692 (E:\project\im-system\im-service\target\classes started by Venture in E:\project\im-system)
+2023-04-12 20:07:49 -The following profiles are active: dev
+2023-04-12 20:07:50 -Tomcat initialized with port(s): 8080 (http)
+2023-04-12 20:07:50 -Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-12 20:07:50 -Starting service [Tomcat]
+2023-04-12 20:07:50 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-04-12 20:07:50 -Initializing Spring embedded WebApplicationContext
+2023-04-12 20:07:50 -Root WebApplicationContext: initialization completed in 1117 ms
+2023-04-12 20:07:51 -Initializing ExecutorService 'applicationTaskExecutor'
+2023-04-12 20:07:52 -Starting ProtocolHandler ["http-nio-8080"]
+2023-04-12 20:07:52 -Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-12 20:07:52 -Started ImServiceApplication in 3.301 seconds (JVM running for 4.482)
+2023-04-12 20:08:04 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-12 20:08:04 -Initializing Servlet 'dispatcherServlet'
+2023-04-12 20:08:04 -Completed initialization in 6 ms
+2023-04-12 20:08:04 -HikariPool-1 - Starting...
+2023-04-12 20:08:05 -HikariPool-1 - Start completed.
+2023-04-12 21:50:51 -Shutting down ExecutorService 'applicationTaskExecutor'
+2023-04-12 21:50:51 -HikariPool-1 - Shutdown initiated...
+2023-04-12 21:50:51 -HikariPool-1 - Shutdown completed.

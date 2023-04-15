@@ -1,0 +1,4 @@
+2023-04-15 08:41:21 -HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8h52m23s458ms732µs100ns).
+2023-04-15 09:10:43 -Shutting down ExecutorService 'applicationTaskExecutor'
+2023-04-15 09:10:43 -HikariPool-1 - Shutdown initiated...
+2023-04-15 09:10:43 -HikariPool-1 - Shutdown completed.

@@ -1,0 +1,35 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: imsystem
+    password: 123456
+    url: jdbc:mysql://www.996so.icu:3307/im-system?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8
+  application:
+    name: im-core
+
+# logger 配置
+logging:
+  config: classpath:logback-spring.xml
+
+
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:mapper/*.xml
+  global-config:
+    db-config:
+      update-strategy: NOT_EMPTY
+
+
+httpclient:
+  maxTotal: 100
+  defaultMaxPerRoute: 50
+  connectTimeout: 2000
+  connectionRequestTimeout: 2000
+  socketTimeout: 5000
+  staleConnectionCheckEnabled: true
