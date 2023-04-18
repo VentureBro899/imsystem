@@ -8,13 +8,13 @@ package venture.study.im.service.friendship.service.imp;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
-import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import venture.study.im.common.ResponseVO;
+import venture.study.im.common.enums.AllowFriendTypeEnum;
 import venture.study.im.common.enums.CheckFriendShipTypeEnum;
 import venture.study.im.common.enums.FriendShipErrorCode;
 import venture.study.im.common.enums.FriendShipStatusEnum;
@@ -25,6 +25,7 @@ import venture.study.im.service.friendship.dao.mapper.ImFriendShipMapper;
 import venture.study.im.service.friendship.model.req.*;
 import venture.study.im.service.friendship.model.resp.CheckFriendShipResp;
 import venture.study.im.service.friendship.model.resp.ImportFriendShipResp;
+import venture.study.im.service.friendship.service.ImFriendShipRequestService;
 import venture.study.im.service.friendship.service.ImFriendShipService;
 import venture.study.im.service.user.dao.ImUserDataEntity;
 import venture.study.im.service.user.service.ImUserService;
@@ -47,6 +48,9 @@ public class ImFriendShipServiceImp implements ImFriendShipService {
 
     @Autowired
     ImUserService imUserService;
+
+    @Autowired
+    ImFriendShipRequestService imFriendShipRequestService;
 
     @Override
     public ResponseVO importFriendShip(ImporFriendShipReq req) {
@@ -97,9 +101,9 @@ public class ImFriendShipServiceImp implements ImFriendShipService {
             return toInfo;
         }
 
-        /*ImUserDataEntity data = toInfo.getData();
+        ImUserDataEntity data = toInfo.getData();
 
-        if(data.getFriendAllowType() != null && data.getFriendAllowType() == AllowFriendTypeEnum.NOT_NEED.getCode()){
+        if(data.getFriendAllowType() != null && data.getFriendAllowType() == AllowFriendTypeEnum.NOT_NEED.getCode()){ //不需要验证则直接添加
             return this.doAddFriend(req,req.getFromId(), req.getToItem(), req.getAppId());
         }else{
             QueryWrapper<ImFriendShipEntity> query = new QueryWrapper<>();
@@ -107,10 +111,9 @@ public class ImFriendShipServiceImp implements ImFriendShipService {
             query.eq("from_id",req.getFromId());
             query.eq("to_id",req.getToItem().getToId());
             ImFriendShipEntity fromItem = imFriendShipMapper.selectOne(query);
-            if(fromItem == null || fromItem.getStatus()
-                    != FriendShipStatusEnum.FRIEND_STATUS_NORMAL.getCode()){
+            if(fromItem == null || fromItem.getStatus() != FriendShipStatusEnum.FRIEND_STATUS_NORMAL.getCode()){
                 //插入一条好友申请的数据
-                ResponseVO responseVO = imFriendShipRequestService.addFienshipRequest(req.getFromId(), req.getToItem(), req.getAppId());
+                ResponseVO responseVO = imFriendShipRequestService.addFrienshipRequest(req.getFromId(), req.getToItem(), req.getAppId());
                 if(!responseVO.isOk()){
                     return responseVO;
                 }
@@ -118,7 +121,7 @@ public class ImFriendShipServiceImp implements ImFriendShipService {
                 return ResponseVO.errorResponse(FriendShipErrorCode.TO_IS_YOUR_FRIEND);
             }
 
-        }*/
+        }
 
         return doAddFriend(req, req.getFromId(), req.getToItem(),req.getAppId());
 
@@ -179,7 +182,7 @@ public class ImFriendShipServiceImp implements ImFriendShipService {
 
 
         // B + A
-       /* QueryWrapper<ImFriendShipEntity> toQuery = new QueryWrapper<>();
+        QueryWrapper<ImFriendShipEntity> toQuery = new QueryWrapper<>();
         toQuery.eq("app_id",appId);
         toQuery.eq("from_id",dto.getToId());
         toQuery.eq("to_id",fromId);
@@ -201,7 +204,7 @@ public class ImFriendShipServiceImp implements ImFriendShipService {
                 update.setStatus(FriendShipStatusEnum.FRIEND_STATUS_NORMAL.getCode());
                 imFriendShipMapper.update(update,toQuery);
             }
-        }*/
+        }
         return ResponseVO.successResponse();
     }
 
